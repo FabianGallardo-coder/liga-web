@@ -248,3 +248,262 @@ function loadComponent(containerId, path, isNavbar = false, isFooter = false) {
 
 
 }(jQuery));
+
+// Custom JS for jugadores/detail.html
+function confirmarEliminar(nombre, id) {
+	if (confirm('¿Estás seguro que deseas eliminar a ' + nombre + '? Esta acción no se puede deshacer.')) {
+		console.log('Eliminar jugador ID: ' + id);
+		// Aquí iría la lógica de eliminación
+		// Redirect a listado
+		// window.location.href = 'index.html';
+	}
+}
+
+// Custom JS for clubes/club-create.html
+// Validación básica del formulario
+document.addEventListener('DOMContentLoaded', function() {
+	if (document.getElementById('clubForm')) {
+		document.getElementById('clubForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+
+			if (!nombre) {
+				alert('Por favor ingresa el nombre del club');
+				e.preventDefault();
+			}
+		});
+
+		// Actualizar labels de archivos
+		if (document.getElementById('logo')) {
+			document.getElementById('logo').addEventListener('change', function() {
+				const label = this.nextElementSibling;
+				const fileName = this.files[0]?.name || 'Seleccionar archivo...';
+				label.textContent = fileName;
+			});
+		}
+
+		if (document.getElementById('escudo')) {
+			document.getElementById('escudo').addEventListener('change', function() {
+				const label = this.nextElementSibling;
+				const fileName = this.files[0]?.name || 'Seleccionar archivo...';
+				label.textContent = fileName;
+			});
+		}
+	}
+});
+
+// Custom JS for jugadores/edit.html
+document.addEventListener('DOMContentLoaded', function() {
+	if (document.getElementById('jugadorEditForm')) {
+		document.getElementById('jugadorEditForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+			const apellido = document.getElementById('apellido').value.trim();
+			const dorsal = document.getElementById('dorsal').value;
+
+			if (!nombre || !apellido || !dorsal) {
+				alert('Por favor completa todos los campos requeridos');
+				e.preventDefault();
+			}
+		});
+	}
+});
+
+// Custom JS for jugadores/index.html
+function confirmarEliminarJugador(nombre, id) {
+	if (confirm('¿Estás seguro que deseas eliminar a ' + nombre + '?')) {
+		console.log('Eliminar jugador ID: ' + id);
+		// Aquí iría la lógica de eliminación
+	}
+}
+
+// Custom JS for jugadores/create.html
+document.addEventListener('DOMContentLoaded', function() {
+	if (document.getElementById('jugadorForm')) {
+		document.getElementById('jugadorForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+			const apellido = document.getElementById('apellido').value.trim();
+			const dorsal = document.getElementById('dorsal').value;
+
+			if (!nombre || !apellido || !dorsal) {
+				alert('Por favor completa todos los campos requeridos');
+				e.preventDefault();
+			}
+		});
+
+		// Actualizar label de archivo
+		if (document.getElementById('foto')) {
+			document.getElementById('foto').addEventListener('change', function() {
+				const label = this.nextElementSibling;
+				const fileName = this.files[0]?.name || 'Seleccionar archivo...';
+				label.textContent = fileName;
+			});
+		}
+	}
+});
+
+// Custom JS for referente/create.html
+document.addEventListener('DOMContentLoaded', function() {
+	if (document.getElementById('referenteForm')) {
+		document.getElementById('referenteForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const tipo = document.getElementById('tipo').value;
+
+			if (!nombre || !email || !tipo) {
+				alert('Por favor completa todos los campos requeridos');
+				e.preventDefault();
+			}
+		});
+
+		// Mostrar/ocultar club asignado según tipo
+		if (document.getElementById('tipo')) {
+			document.getElementById('tipo').addEventListener('change', function() {
+				const clubSelect = document.getElementById('club').parentElement;
+				if (this.value === 'Representante') {
+					clubSelect.style.display = 'block';
+				} else {
+					clubSelect.style.display = 'none';
+				}
+			});
+		}
+	}
+});
+
+// Custom JS for cuota/index.html
+function confirmarEliminar(id) {
+	if (confirm('¿Estás seguro que deseas eliminar esta cuota?')) {
+		console.log('Eliminar cuota ID: ' + id);
+		// Aquí iría la lógica de eliminación
+	}
+}
+
+// Custom JS for cuota/payment.html
+// Establecer fecha de pago como hoy
+document.getElementById('fecha_pago').valueAsDate = new Date();
+
+document.getElementById('paymentForm').addEventListener('submit', function(e) {
+	e.preventDefault();
+	const cuota = document.getElementById('cuota_pagar').value;
+	const monto = document.getElementById('monto_pago').value;
+	const fechaPago = document.getElementById('fecha_pago').value;
+	const metodo = document.getElementById('metodo_pago_nuevo').value;
+
+	if (!cuota || !monto || !fechaPago || !metodo) {
+		alert('Por favor completa todos los campos requeridos.');
+		return;
+	}
+
+	if (monto <= 0) {
+		alert('El monto debe ser mayor a 0.');
+		return;
+	}
+
+	console.log('Registrando pago:', {
+		cuota: cuota,
+		monto: monto,
+		fechaPago: fechaPago,
+		metodo: metodo
+	});
+
+	alert('Pago registrado exitosamente. Se generará el comprobante automáticamente.');
+	// Aquí iría la lógica para guardar en bd y generar comprobante
+	document.getElementById('paymentForm').reset();
+});
+
+// Custom JS for cuota/create.html
+document.getElementById('cuotaForm').addEventListener('submit', function(e) {
+	e.preventDefault();
+	const concepto = document.getElementById('concepto').value;
+	const monto = document.getElementById('monto').value;
+	const entidad = document.getElementById('entidad_asignada').value;
+	const fechaVencimiento = document.getElementById('fecha_vencimiento').value;
+
+	if (!concepto || !monto || !entidad || !fechaVencimiento) {
+		alert('Por favor completa todos los campos requeridos.');
+		return;
+	}
+
+	if (monto <= 0) {
+		alert('El monto debe ser mayor a 0.');
+		return;
+	}
+
+	console.log('Registrando cuota:', {
+		concepto: concepto,
+		monto: monto,
+		entidad: entidad,
+		fechaVencimiento: fechaVencimiento
+	});
+
+	alert('Cuota registrada exitosamente.');
+	// Aquí iría la lógica para guardar en bd
+});
+
+// Establecer fecha de emisión como hoy
+document.getElementById('fecha_emision').valueAsDate = new Date();
+
+// Custom JS for clubes/index.html
+function confirmarEliminar(nombre, id) {
+	if (confirm('¿Estás seguro que deseas eliminar ' + nombre + '?')) {
+		console.log('Eliminar club ID: ' + id);
+		// Aquí iría la lógica de eliminación
+	}
+}
+
+// Custom JS for referente/edit.html
+document.addEventListener('DOMContentLoaded', function() {
+	// Validación básica del formulario
+	if (document.getElementById('referenteEditForm')) {
+		document.getElementById('referenteEditForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const tipo = document.getElementById('tipo').value;
+
+			if (!nombre || !email || !tipo) {
+				alert('Por favor completa todos los campos requeridos');
+				e.preventDefault();
+			}
+		});
+
+		// Mostrar/ocultar club asignado según tipo
+		document.getElementById('tipo').addEventListener('change', function() {
+			const clubSelect = document.getElementById('club').parentElement;
+			if (this.value === 'Representante') {
+				clubSelect.style.display = 'block';
+			} else {
+				clubSelect.style.display = 'none';
+			}
+		});
+	}
+});
+
+// Custom JS for referente/index.html
+function confirmarEliminarReferente(nombre, id) {
+	if (confirm('¿Estás seguro que deseas eliminar a ' + nombre + '?')) {
+		console.log('Eliminar referente ID: ' + id);
+		// Aquí iría la lógica de eliminación
+	}
+}
+
+// Custom JS for clubes/club-edit.html
+document.addEventListener('DOMContentLoaded', function() {
+	// Validación básica del formulario
+	if (document.getElementById('clubEditForm')) {
+		document.getElementById('clubEditForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+
+			if (!nombre) {
+				alert('Por favor ingresa el nombre del club');
+				e.preventDefault();
+			}
+		});
+	}
+});
+
+// Custom JS for clubes/club-detail.html
+function confirmarEliminarClubDetail(nombre, id) {
+	if (confirm('¿Estás seguro que deseas eliminar ' + nombre + '? Esta acción no se puede deshacer.')) {
+		console.log('Eliminar club ID: ' + id);
+		// Aquí iría la lógica de eliminación
+		// window.location.href = 'index.html';
+	}
+}

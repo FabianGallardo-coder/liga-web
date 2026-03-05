@@ -32,67 +32,6 @@
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="../assets/css/responsive.css">
-	<style>
-		.club-card {
-			border: 1px solid #e0e0e0;
-			border-radius: 8px;
-			overflow: hidden;
-			transition: all 0.3s ease;
-			background: white;
-		}
-
-		.club-card:hover {
-			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-			transform: translateY(-5px);
-		}
-
-		.club-logo {
-			width: 100%;
-			height: 180px;
-			background: linear-gradient(135deg, #F28123 0%, #f5a856 100%);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 60px;
-			color: white;
-		}
-
-		.club-body {
-			padding: 20px;
-		}
-
-		.club-name {
-			font-family: 'Poppins', sans-serif;
-			font-size: 18px;
-			font-weight: bold;
-			color: #051922;
-			margin-bottom: 10px;
-		}
-
-		.club-info {
-			font-size: 13px;
-			color: #999999;
-			margin-bottom: 8px;
-		}
-
-		.club-info strong {
-			color: #051922;
-		}
-
-		.club-actions {
-			display: flex;
-			gap: 8px;
-			margin-top: 15px;
-		}
-
-		.club-actions a,
-		.club-actions button {
-			flex: 1;
-			padding: 8px;
-			font-size: 12px;
-			text-align: center;
-		}
-	</style>
 
 </head>
 <!--Fin de head // cortar para reutilizar -->
@@ -114,7 +53,7 @@
 					<div class="main-menu-wrap">
 						<div class="site-logo">
 							<a href="../index.html">
-								<img src="/assets/img/logo.svg" alt="">
+								<img src="../assets/img/Logo.png" alt="" style="height: 47px;">
 							</a>
 						</div>
 						<nav class="main-menu">
@@ -411,21 +350,6 @@
 
 	<!-- footer -->
 	</footer>
-	<div class="logo-carousel-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item"><img src="/assets/img/company-logos/1.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/2.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/3.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/4.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/5.svg" alt=""></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="footer-area">
 		<div class="container">
 			<div class="row">
@@ -491,14 +415,6 @@
 	<script src="../assets/js/waypoints.js"></script>
 	<script src="../assets/js/form-validate.js"></script>
 	<script src="../assets/js/main.js"></script>
-	<script>
-		function confirmarEliminar(nombre, id) {
-			if (confirm('¿Estás seguro que deseas eliminar ' + nombre + '?')) {
-				console.log('Eliminar club ID: ' + id);
-				// Aquí iría la lógica de eliminación
-			}
-		}
-	</script>
 </body>
 
 </html>

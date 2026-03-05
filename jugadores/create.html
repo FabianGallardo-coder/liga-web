@@ -53,7 +53,7 @@
 					<div class="main-menu-wrap">
 						<div class="site-logo">
 							<a href="../index.html">
-								<img src="/assets/img/logo.svg" alt="">
+								<img src="../assets/img/Logo.png" alt="" style="height: 47px;">
 							</a>
 						</div>
 						<nav class="main-menu">
@@ -231,21 +231,6 @@
 	<!-- end form section -->
 
 	<!-- footer -->
-	<div class="logo-carousel-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item"><img src="/assets/img/company-logos/1.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/2.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/3.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/4.svg" alt=""></div>
-						<div class="single-logo-item"><img src="/assets/img/company-logos/5.svg" alt=""></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="footer-area">
 		<div class="container">
 			<div class="row">
@@ -311,26 +296,7 @@
 	<script src="../assets/js/waypoints.js"></script>
 	<script src="../assets/js/form-validate.js"></script>
 	<script src="../assets/js/main.js"></script>
-	<script>
-		// Validación básica del formulario
-		document.getElementById('jugadorForm').addEventListener('submit', function(e) {
-			const nombre = document.getElementById('nombre').value.trim();
-			const apellido = document.getElementById('apellido').value.trim();
-			const dorsal = document.getElementById('dorsal').value;
 
-			if (!nombre || !apellido || !dorsal) {
-				alert('Por favor completa todos los campos requeridos');
-				e.preventDefault();
-			}
-		});
-
-		// Actualizar label de archivo
-		document.getElementById('foto').addEventListener('change', function() {
-			const label = this.nextElementSibling;
-			const fileName = this.files[0]?.name || 'Seleccionar archivo...';
-			label.textContent = fileName;
-		});
-	</script>
 </body>
 
 </html>
