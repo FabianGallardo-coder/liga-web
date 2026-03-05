@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
+
+	<!-- title -->
+	<title>Liga handball punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+</head>
+    <!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<div class="site-logo">
+							<a href="../index.html">
+								<img src="/assets/img/logo.svg" alt="">
+							</a>
+						</div>
+						<nav class="main-menu">
+							<ul>
+								<li><a href="../index.html">Inicio</a></li>
+								<li><a href="#">Handball</a>
+									<ul class="sub-menu">
+										<li><a href="../tablas.html">Tablas & fexture</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Institucional</a>
+									<ul class="sub-menu">
+										<li><a href="../about.html">Nosotros</a></li>
+										<li><a href="../404.html">404 page</a></li>
+									</ul>
+								</li>
+								<li><a href="../news.html">Noticias</a></li>
+								<li><a href="../contact.html">Contacto</a></li>
+								<li>
+									<div class="header-icons">
+										<a href="../sistema/login.html"><i class="fas fa-user"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Registrar Nuevo Club</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- form section -->
+	<div class="checkout-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="checkout-accordion-wrap">
+						<h3 class="mb-30">Datos del Club</h3>
+						<form action="index.html" class="club-form" id="clubForm">
+							<!-- Nombre y Fundación -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="nombre">Nombre del Club *</label>
+									<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Club Deportivo..." required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="fundacion">Año de Fundación</label>
+									<input type="number" class="form-control" id="fundacion" name="fundacion" placeholder="2000" min="1900" max="2099">
+								</div>
+							</div>
+
+							<!-- Descripción -->
+							<div class="form-group">
+								<label for="descripcion">Descripción del Club</label>
+								<textarea class="form-control" id="descripcion" name="descripcion" rows="4" placeholder="Descripción breve del club, historia, objetivos..."></textarea>
+							</div>
+
+							<!-- Datos de Contacto -->
+							<h3 class="mt-40 mb-30">Contacto</h3>
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="email">Email</label>
+									<input type="email" class="form-control" id="email" name="email" placeholder="contacto@club.com">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="telefono">Teléfono</label>
+									<input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+54 351 XXXXXXXX">
+								</div>
+							</div>
+
+							<!-- Ubicación -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="ciudad">Ciudad</label>
+									<input type="text" class="form-control" id="ciudad" name="ciudad" placeholder="Córdoba">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="direccion">Dirección</label>
+									<input type="text" class="form-control" id="direccion" name="direccion" placeholder="Calle y número">
+								</div>
+							</div>
+
+							<!-- Autoridades -->
+							<h3 class="mt-40 mb-30">Autoridades</h3>
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="presidente">Presidente</label>
+									<input type="text" class="form-control" id="presidente" name="presidente" placeholder="Nombre completo">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="entrenador">Entrenador</label>
+									<input type="text" class="form-control" id="entrenador" name="entrenador" placeholder="Nombre completo">
+								</div>
+							</div>
+
+							<!-- Identidad Visual -->
+							<h3 class="mt-40 mb-30">Identidad Visual</h3>
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="color_primario">Color Primario</label>
+									<div class="input-group">
+										<input type="color" class="form-control form-control-color" id="color_primario" name="color_primario" value="#F28123">
+									</div>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="color_secundario">Color Secundario</label>
+									<div class="input-group">
+										<input type="color" class="form-control form-control-color" id="color_secundario" name="color_secundario" value="#ffffff">
+									</div>
+								</div>
+							</div>
+
+							<!-- Logos y Escudos -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="logo">Logo del Club</label>
+									<div class="custom-file">
+										<input type="file" class="custom-file-input" id="logo" name="logo" accept="image/*">
+										<label class="custom-file-label" for="logo">Seleccionar archivo...</label>
+									</div>
+									<small class="form-text text-muted">Formato: PNG, JPG. Máximo 2MB</small>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="escudo">Escudo</label>
+									<div class="custom-file">
+										<input type="file" class="custom-file-input" id="escudo" name="escudo" accept="image/*">
+										<label class="custom-file-label" for="escudo">Seleccionar archivo...</label>
+									</div>
+									<small class="form-text text-muted">Formato: PNG, JPG. Máximo 2MB</small>
+								</div>
+							</div>
+
+							<!-- Foto de Portada -->
+							<div class="form-group">
+								<label for="portada">Foto de Portada</label>
+								<input type="file" class="form-control" id="portada" name="portada" accept="image/*">
+								<small class="form-text text-muted">Recomendado 1200x400px. Formato: JPG, PNG</small>
+							</div>
+
+							<!-- Estado -->
+							<div class="form-group">
+								<label for="estado">Estado *</label>
+								<select class="form-control" id="estado" name="estado" required>
+									<option value="Activo">Activo</option>
+									<option value="Inactivo">Inactivo</option>
+									<option value="Suspendido">Suspendido</option>
+								</select>
+							</div>
+
+							<!-- Botones -->
+							<div class="form-group mt-40">
+								<button type="submit" class="boxed-btn">Guardar Club</button>
+								<a href="index.html" class="boxed-btn bordered-btn ml-2">Cancelar</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end form section -->
+
+	<!-- logo carousel -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/1.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/2.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/3.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/4.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/5.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+
+
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-12">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">Sobre la Liga</h2>
+						<p>La <strong>Liga Recreativa de Handball Punilla</strong> promueve el desarrollo del handball en la región, fomentando la competencia, la participación y el crecimiento de clubes, jugadores y árbitros. Nuestro objetivo es fortalecer la comunidad deportiva y acompañar el crecimiento del handball local.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Contacto</h2>
+						<ul>
+							<li> <a href="mailto:handballpunilla@gmail.com">handballpunilla@gmail.com</a> </li>
+							<li> <a href="tel:+543511234567">+54 351 123-4567</a> </li>
+							<li> <a href="#">Valle de Punilla, Córdoba</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="offset-lg-3 col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Paginas</h2>
+						<ul>
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../news.html">Noticias</a></li>
+							<li><a href="../handbook.html">Handball</a></li>
+							<li><a href="../contact.html">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>© Liga Recreativa de Handball Punilla – Todos los derechos reservados.<br>Desarrollo y diseño institucional.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="https://www.facebook.com/liga.punilla" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://w.app/jm7vln" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+							<li><a href="https://www.instagram.com/ligapunillahandball/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<!-- jquery -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="../assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="../assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="../assets/js/main.js"></script>	    
+	<script>
+		// Validación básica del formulario
+		document.getElementById('clubForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+
+			if (!nombre) {
+				alert('Por favor ingresa el nombre del club');
+				e.preventDefault();
+			}
+		});
+
+		// Actualizar labels de archivos
+		document.getElementById('logo').addEventListener('change', function() {
+			const label = this.nextElementSibling;
+			const fileName = this.files[0]?.name || 'Seleccionar archivo...';
+			label.textContent = fileName;
+		});
+
+		document.getElementById('escudo').addEventListener('change', function() {
+			const label = this.nextElementSibling;
+			const fileName = this.files[0]?.name || 'Seleccionar archivo...';
+			label.textContent = fileName;
+		});
+	</script>
+</body>
+
+</html>

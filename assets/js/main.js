@@ -1,7 +1,32 @@
+// Función para obtener la ruta base relativa según la profundidad de la carpeta
+function getBasePath() {
+  const pathname = window.location.pathname;
+  // Contar el número de directorios desde la raíz (excluyendo el nombre del archivo)
+  const pathParts = pathname.split('/').filter(p => p && !p.endsWith('.html'));
+  
+  // Si estamos en la raíz, no necesitamos ../
+  // Si estamos en liga-web/, no necesitamos ../
+  // Si estamos en liga-web/clubes/, necesitamos ../
+  // Si estamos en liga-web/jugadores/, necesitamos ../
+  
+  let basePath = '';
+  // Determinar profundidad: buscar 'liga-web' en la ruta
+  const ligazIndexed = pathname.indexOf('/liga-web/');
+  if (ligazIndexed !== -1) {
+    const afterLigaWeb = pathname.substr(ligazIndexed + 10); // 10 = len('/liga-web/');
+    const dirCount = afterLigaWeb.split('/').filter(p => p && !p.endsWith('.html')).length;
+    for (let i = 0; i < dirCount; i++) {
+      basePath += '../';
+    }
+  }
+  return basePath;
+}
+
 // Cargar componentes dinámicos
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("navbar-container", "components/navbar.html", true, false);
-  loadComponent("footer-container", "components/footer.html", false, true);
+  const basePath = getBasePath();
+  loadComponent("navbar-container", basePath + "components/navbar.html", true, false);
+  loadComponent("footer-container", basePath + "components/footer.html", false, true);
 });
 
 function loadComponent(containerId, path, isNavbar = false, isFooter = false) {

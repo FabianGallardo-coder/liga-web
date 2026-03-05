@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Crear Nueva Cuota - Liga Handball Punilla">
+
+	<!-- title -->
+	<title>Nueva Cuota - Liga Handball Punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+</head>
+<!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<div class="site-logo">
+							<a href="../index.html">
+								<img src="/assets/img/logo.svg" alt="">
+							</a>
+						</div>
+						<nav class="main-menu">
+							<ul>
+								<li><a href="../index.html">Inicio</a></li>
+								<li><a href="#">Handball</a>
+									<ul class="sub-menu">
+										<li><a href="../tablas.html">Tablas & fexture</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Institucional</a>
+									<ul class="sub-menu">
+										<li><a href="../about.html">Nosotros</a></li>
+										<li><a href="../404.html">404 page</a></li>
+									</ul>
+								</li>
+								<li><a href="../news.html">Noticias</a></li>
+								<li><a href="../contact.html">Contacto</a></li>
+								<li>
+									<div class="header-icons">
+										<a href="../sistema/login.html"><i class="fas fa-user"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Registrar Nueva Cuota</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- cuota create section -->
+	<div class="checkout-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<form id="cuotaForm">
+						<!-- Información General -->
+						<div class="checkout-title mt-40 mb-30">
+							<h3>Información de la Cuota</h3>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="concepto">Concepto <span style="color: #F28123;">*</span></label>
+								<select id="concepto" name="concepto" class="form-control" required>
+									<option value="">Selecciona un concepto</option>
+									<option value="cuota-mensual">Cuota Mensual</option>
+									<option value="inscripcion">Inscripción Torneo</option>
+									<option value="afiliacion">Afiliación</option>
+									<option value="arbitraje">Arbitraje</option>
+									<option value="multa">Multa</option>
+									<option value="otro">Otro</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="monto">Monto ($) <span style="color: #F28123;">*</span></label>
+								<input type="number" id="monto" name="monto" class="form-control" placeholder="Ej: 500" step="0.01" required>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="tipo_entidad">Tipo de Entidad <span style="color: #F28123;">*</span></label>
+								<select id="tipo_entidad" name="tipo_entidad" class="form-control" required>
+									<option value="">Selecciona</option>
+									<option value="jugador">Jugador</option>
+									<option value="club">Club</option>
+									<option value="arbitro">Árbitro</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="entidad_asignada">Entidad <span style="color: #F28123;">*</span></label>
+								<select id="entidad_asignada" name="entidad_asignada" class="form-control" required>
+									<option value="">Selecciona una entidad</option>
+									<option value="juan-garcia">Juan García López</option>
+									<option value="maria-rodriguez">María Rodríguez</option>
+									<option value="club-a">Club Deportivo A</option>
+									<option value="club-b">Club Deportivo B</option>
+									<option value="carlos-garcia">Carlos García López (Árbitro)</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- Fechas -->
+						<div class="checkout-title mt-40 mb-30">
+							<h3>Fechas</h3>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="fecha_emision">Fecha de Emisión <span style="color: #F28123;">*</span></label>
+								<input type="date" id="fecha_emision" name="fecha_emision" class="form-control" required>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="fecha_vencimiento">Fecha de Vencimiento <span style="color: #F28123;">*</span></label>
+								<input type="date" id="fecha_vencimiento" name="fecha_vencimiento" class="form-control" required>
+							</div>
+						</div>
+
+						<!-- Método y Estado -->
+						<div class="checkout-title mt-40 mb-30">
+							<h3>Detalles de Pago</h3>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="metodo_pago">Método de Pago</label>
+								<select id="metodo_pago" name="metodo_pago" class="form-control">
+									<option value="">Sin asignar</option>
+									<option value="efectivo">Efectivo</option>
+									<option value="transferencia">Transferencia Bancaria</option>
+									<option value="tarjeta">Tarjeta Crédito/Débito</option>
+									<option value="cheque">Cheque</option>
+								</select>
+							</div>
+							<div class="form-group col-md-6">
+								<label for="estado_pago">Estado del Pago <span style="color: #F28123;">*</span></label>
+								<select id="estado_pago" name="estado_pago" class="form-control" required>
+									<option value="pendiente" selected>Pendiente</option>
+									<option value="pagado">Pagado</option>
+									<option value="parcial">Parcialmente Pagado</option>
+									<option value="cancelado">Cancelado</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- Observaciones -->
+						<div class="checkout-title mt-40 mb-30">
+							<h3>Observaciones</h3>
+						</div>
+
+						<div class="form-group">
+							<label for="observaciones">Notas Adicionales</label>
+							<textarea id="observaciones" name="observaciones" class="form-control" rows="4" placeholder="Agrega cualquier aclaración importante sobre esta cuota..."></textarea>
+						</div>
+
+						<!-- Botones de acción -->
+						<div class="checkout-btn-box mt-50 mb-40 text-center">
+							<button type="submit" class="boxed-btn">Registrar Cuota</button>
+							<a href="index.html" class="boxed-btn bordered-btn ml-3">Cancelar</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end cuota create section -->
+
+	<!-- footer -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/1.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/2.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/3.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/4.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/5.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-12">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">Sobre la Liga</h2>
+						<p>La <strong>Liga Recreativa de Handball Punilla</strong> promueve el desarrollo del handball en la región, fomentando la competencia, la participación y el crecimiento de clubes, jugadores y árbitros. Nuestro objetivo es fortalecer la comunidad deportiva y acompañar el crecimiento del handball local.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Contacto</h2>
+						<ul>
+							<li> <a href="mailto:handballpunilla@gmail.com">handballpunilla@gmail.com</a> </li>
+							<li> <a href="tel:+543511234567">+54 351 123-4567</a> </li>
+							<li> <a href="#">Valle de Punilla, Córdoba</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="offset-lg-3 col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Paginas</h2>
+						<ul>
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../news.html">Noticias</a></li>
+							<li><a href="../tablas.html">Handball</a></li>
+							<li><a href="../contact.html">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>© Liga Recreativa de Handball Punilla – Todos los derechos reservados.<br>
+Desarrollo y diseño institucional.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="https://www.facebook.com/liga.punilla" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://w.app/jm7vln" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+							<li><a href="https://www.instagram.com/ligapunillahandball/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	<!-- end footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/sticker.js"></script>
+	<script src="../assets/js/waypoints.js"></script>
+	<script src="../assets/js/form-validate.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		document.getElementById('cuotaForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const concepto = document.getElementById('concepto').value;
+			const monto = document.getElementById('monto').value;
+			const entidad = document.getElementById('entidad_asignada').value;
+			const fechaVencimiento = document.getElementById('fecha_vencimiento').value;
+
+			if (!concepto || !monto || !entidad || !fechaVencimiento) {
+				alert('Por favor completa todos los campos requeridos.');
+				return;
+			}
+
+			if (monto <= 0) {
+				alert('El monto debe ser mayor a 0.');
+				return;
+			}
+
+			console.log('Registrando cuota:', {
+				concepto: concepto,
+				monto: monto,
+				entidad: entidad,
+				fechaVencimiento: fechaVencimiento
+			});
+
+			alert('Cuota registrada exitosamente.');
+			// Aquí iría la lógica para guardar en bd
+		});
+
+		// Establecer fecha de emisión como hoy
+		document.getElementById('fecha_emision').valueAsDate = new Date();
+	</script>
+</body>
+
+</html>

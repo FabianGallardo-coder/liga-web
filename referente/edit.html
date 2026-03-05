@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Editar Referente - Liga Handball Punilla">
+
+	<!-- title -->
+	<title>Editar Referente - Liga Handball Punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+</head>
+<!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+    <header id="navbar-container"></header>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Editar Referente</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- form section -->
+	<div class="checkout-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="checkout-accordion-wrap">
+						<h3 class="mb-30">Información del Referente</h3>
+						<form action="index.html" class="referente-form" id="referenteEditForm">
+							<!-- Nombre y Email -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="nombre">Nombre *</label>
+									<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" value="Carlos García López" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="email">Email *</label>
+									<input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" value="carlos.garcia@liga.com" required>
+								</div>
+							</div>
+
+							<!-- Teléfono y Tipo de Referente -->
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="telefono">Teléfono</label>
+									<input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+54 351 XXXXXXXX" value="+54 351 5678901">
+								</div>
+								<div class="form-group col-md-6">
+									<label for="tipo">Tipo de Referente *</label>
+									<select class="form-control" id="tipo" name="tipo" required>
+										<option value="Admin Liga" selected>Administrador Liga</option>
+										<option value="Árbitro">Árbitro</option>
+										<option value="Comisario">Comisario</option>
+										<option value="Representante">Representante Club</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- Club Asignado -->
+							<div class="form-group" style="display: none;">
+								<label for="club">Club Asignado (si aplica)</label>
+								<select class="form-control" id="club" name="club">
+									<option value="">-- Ninguno --</option>
+									<option value="Club Deportivo A">Club Deportivo A</option>
+									<option value="Club Deportivo B">Club Deportivo B</option>
+									<option value="Club Deportivo C">Club Deportivo C</option>
+									<option value="Club Deportivo D">Club Deportivo D</option>
+									<option value="Club Deportivo E">Club Deportivo E</option>
+									<option value="Club Deportivo F">Club Deportivo F</option>
+								</select>
+							</div>
+
+							<!-- Documentación -->
+							<h3 class="mt-40 mb-30">Documentación</h3>
+
+							<div class="form-group">
+								<label for="documento">Documento (DNI/CI)</label>
+								<div class="form-group">
+									<small class="form-text text-muted d-block mb-2">Archivo actual: DNI_Carlos_Garcia.pdf</small>
+									<input type="file" class="form-control" id="documento" name="documento" accept=".pdf,.jpg,.png">
+									<small class="form-text text-muted">Dejar en blanco para mantener el actual</small>
+								</div>
+							</div>
+
+							<!-- Permisos -->
+							<h3 class="mt-40 mb-30">Permisos</h3>
+
+							<div class="form-group">
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="permiso1" name="permiso1" checked>
+									<label class="custom-control-label" for="permiso1">
+										Gestionar jugadores
+									</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="permiso2" name="permiso2" checked>
+									<label class="custom-control-label" for="permiso2">
+										Gestionar fixture y resultados
+									</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="permiso3" name="permiso3" checked>
+									<label class="custom-control-label" for="permiso3">
+										Gestionar cuotas
+									</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="permiso4" name="permiso4" checked>
+									<label class="custom-control-label" for="permiso4">
+										Gestionar referentes
+									</label>
+								</div>
+								<div class="custom-control custom-checkbox">
+									<input type="checkbox" class="custom-control-input" id="permiso5" name="permiso5" checked>
+									<label class="custom-control-label" for="permiso5">
+										Ver reportes
+									</label>
+								</div>
+							</div>
+
+							<!-- Estado -->
+							<div class="form-group">
+								<label for="estado">Estado *</label>
+								<select class="form-control" id="estado" name="estado" required>
+									<option value="Activo" selected>Activo</option>
+									<option value="Inactivo">Inactivo</option>
+									<option value="Suspendido">Suspendido</option>
+								</select>
+							</div>
+
+							<!-- Botones -->
+							<div class="form-group mt-40">
+								<button type="submit" class="boxed-btn">Actualizar Referente</button>
+								<a href="index.html" class="boxed-btn bordered-btn ml-2">Cancelar</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end form section -->
+
+	<!-- footer -->
+	<footer id="footer-container"></footer>
+	<!-- end footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/sticker.js"></script>
+	<script src="../assets/js/waypoints.js"></script>
+	<script src="../assets/js/form-validate.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		// Validación básica del formulario
+		document.getElementById('referenteEditForm').addEventListener('submit', function(e) {
+			const nombre = document.getElementById('nombre').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const tipo = document.getElementById('tipo').value;
+
+			if (!nombre || !email || !tipo) {
+				alert('Por favor completa todos los campos requeridos');
+				e.preventDefault();
+			}
+		});
+
+		// Mostrar/ocultar club asignado según tipo
+		document.getElementById('tipo').addEventListener('change', function() {
+			const clubSelect = document.getElementById('club').parentElement;
+			if (this.value === 'Representante') {
+				clubSelect.style.display = 'block';
+			} else {
+				clubSelect.style.display = 'none';
+			}
+		});
+	</script>
+</body>
+
+</html>

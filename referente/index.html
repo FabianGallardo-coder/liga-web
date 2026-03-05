@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Gestión de Referentes - Liga Handball Punilla">
+
+	<!-- title -->
+	<title>Referentes - Liga Handball Punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+
+</head>
+<!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+    <header id="navbar-container"></header>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Gestión de Referentes</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- referentes section -->
+	<div class="referentes-section mt-150 mb-150">
+		<div class="container">
+			<!-- Barra de búsqueda y botón crear -->
+			<div class="row mb-50">
+				<div class="col-lg-8">
+					<div class="search-box">
+						<input type="text" class="form-control" placeholder="Buscar referente por nombre, email o tipo...">
+						<button class="search-btn"><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+				<div class="col-lg-4 text-right d-none d-lg-block">
+					<a href="create.html" class="boxed-btn">+ Nuevo Referente</a>
+				</div>
+			</div>
+
+			<!-- Botón móvil -->
+			<div class="row mb-30 d-lg-none">
+				<div class="col-12">
+					<a href="create.html" class="boxed-btn btn-block text-center">+ Nuevo Referente</a>
+				</div>
+			</div>
+
+			<!-- Tabla de referentes -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="table-responsive referentes-table-wrap">	
+						<table class="table table-hover referentes-table">
+							<thead class="table-dark">
+								<tr>
+									<th>Nombre</th>
+									<th>Email</th>
+									<th>Tipo</th>
+									<th>Club Asignado</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Carlos García López</strong></td>
+									<td>carlos.garcia@liga.com</td>
+									<td><span class="badge badge-danger">Admin Liga</span></td>
+									<td>Liga Handball Punilla</td>
+									<td><span class="badge badge-success">Activo</span></td>
+									<td>
+										<a href="detail.html?id=1" class="btn btn-sm btn-info" title="Ver">
+											<i class="fas fa-eye"></i>
+										</a>
+										<a href="edit.html?id=1" class="btn btn-sm btn-warning" title="Editar">
+											<i class="fas fa-edit"></i>
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Carlos García López', 1)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>María Rodríguez</strong></td>
+									<td>maria.rodriguez@liga.com</td>
+									<td><span class="badge" style="background-color: #FFC107; color: #051922;">Árbitro</span></td>
+									<td>-</td>
+									<td><span class="badge badge-success">Activo</span></td>
+									<td>
+										<a href="detail.html?id=2" class="btn btn-sm btn-info" title="Ver">
+											<i class="fas fa-eye"></i>
+										</a>
+										<a href="edit.html?id=2" class="btn btn-sm btn-warning" title="Editar">
+											<i class="fas fa-edit"></i>
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('María Rodríguez', 2)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Juan Pérez Sánchez</strong></td>
+									<td>juan.perez@liga.com</td>
+									<td><span class="badge" style="background-color: #17A2B8; color: white;">Comisario</span></td>
+									<td>-</td>
+									<td><span class="badge badge-success">Activo</span></td>
+									<td>
+										<a href="detail.html?id=3" class="btn btn-sm btn-info" title="Ver">
+											<i class="fas fa-eye"></i>
+										</a>
+										<a href="edit.html?id=3" class="btn btn-sm btn-warning" title="Editar">
+											<i class="fas fa-edit"></i>
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Juan Pérez Sánchez', 3)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Ana Martínez González</strong></td>
+									<td>ana.martinez@clubA.com</td>
+									<td><span class="badge" style="background-color: #28A745; color: white;">Representante</span></td>
+									<td>Club Deportivo A</td>
+									<td><span class="badge badge-success">Activo</span></td>
+									<td>
+										<a href="detail.html?id=4" class="btn btn-sm btn-info" title="Ver">
+											<i class="fas fa-eye"></i>
+										</a>
+										<a href="edit.html?id=4" class="btn btn-sm btn-warning" title="Editar">
+											<i class="fas fa-edit"></i>
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Ana Martínez González', 4)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Roberto López Morales</strong></td>
+									<td>roberto.lopez@liga.com</td>
+									<td><span class="badge" style="background-color: #FFC107; color: #051922;">Árbitro</span></td>
+									<td>-</td>
+									<td><span class="badge badge-warning">Suspendido</span></td>
+									<td>
+										<a href="detail.html?id=5" class="btn btn-sm btn-info" title="Ver">
+											<i class="fas fa-eye"></i>
+										</a>
+										<a href="edit.html?id=5" class="btn btn-sm btn-warning" title="Editar">
+											<i class="fas fa-edit"></i>
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Roberto López Morales', 5)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Laura Fernández Castro</strong></td>
+									<td>laura.fernandez@clubB.com</td>
+									<td><span class="badge" style="background-color: #28A745; color: white;">Representante</span></td>
+									<td>Club Deportivo B</td>
+									<td><span class="badge badge-success">Activo</span></td>
+									<td>
+										<a href="detail.html?id=6" class="btn btn-sm btn-info" title="Ver">
+											<i class="fas fa-eye"></i>
+										</a>
+										<a href="edit.html?id=6" class="btn btn-sm btn-warning" title="Editar">
+											<i class="fas fa-edit"></i>
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Laura Fernández Castro', 6)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- Paginación -->
+			<div class="row mt-40">
+				<div class="col-lg-12 text-center">
+					<nav aria-label="Page navigation">
+						<ul class="pagination justify-content-center">
+							<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end referentes section -->
+
+	<!-- footer -->
+	<footer id="footer-container"></footer>
+	<!-- end footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/sticker.js"></script>
+	<script src="../assets/js/waypoints.js"></script>
+	<script src="../assets/js/form-validate.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		function confirmarEliminar(nombre, id) {
+			if (confirm('¿Estás seguro que deseas eliminar a ' + nombre + '?')) {
+				console.log('Eliminar referente ID: ' + id);
+				// Aquí iría la lógica de eliminación
+			}
+		}
+	</script>
+</body>
+
+</html>

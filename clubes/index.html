@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Gestión de Clubes - Liga Handball Punilla">
+
+	<!-- title -->
+	<title>Clubes - Liga Handball Punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+	<style>
+		.club-card {
+			border: 1px solid #e0e0e0;
+			border-radius: 8px;
+			overflow: hidden;
+			transition: all 0.3s ease;
+			background: white;
+		}
+
+		.club-card:hover {
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+			transform: translateY(-5px);
+		}
+
+		.club-logo {
+			width: 100%;
+			height: 180px;
+			background: linear-gradient(135deg, #F28123 0%, #f5a856 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 60px;
+			color: white;
+		}
+
+		.club-body {
+			padding: 20px;
+		}
+
+		.club-name {
+			font-family: 'Poppins', sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+			color: #051922;
+			margin-bottom: 10px;
+		}
+
+		.club-info {
+			font-size: 13px;
+			color: #999999;
+			margin-bottom: 8px;
+		}
+
+		.club-info strong {
+			color: #051922;
+		}
+
+		.club-actions {
+			display: flex;
+			gap: 8px;
+			margin-top: 15px;
+		}
+
+		.club-actions a,
+		.club-actions button {
+			flex: 1;
+			padding: 8px;
+			font-size: 12px;
+			text-align: center;
+		}
+	</style>
+
+</head>
+<!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<div class="site-logo">
+							<a href="../index.html">
+								<img src="/assets/img/logo.svg" alt="">
+							</a>
+						</div>
+						<nav class="main-menu">
+							<ul>
+								<li><a href="../index.html">Inicio</a></li>
+								<li><a href="#">Handball</a>
+									<ul class="sub-menu">
+										<li><a href="../tablas.html">Tablas & fexture</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Institucional</a>
+									<ul class="sub-menu">
+										<li><a href="../about.html">Nosotros</a></li>
+										<li><a href="../404.html">404 page</a></li>
+									</ul>
+								</li>
+								<li><a href="../news.html">Noticias</a></li>
+								<li><a href="../contact.html">Contacto</a></li>
+								<li>
+									<div class="header-icons">
+										<a href="../sistema/login.html"><i class="fas fa-user"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Gestión de Clubes</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- clubes section -->
+	<div class="clubes-section mt-150 mb-150">
+		<div class="container">
+			<!-- Barra de búsqueda y botón crear -->
+			<div class="row mb-50">
+				<div class="col-lg-8">
+					<div class="search-box">
+						<input type="text" class="form-control" placeholder="Buscar club por nombre...">
+						<button class="search-btn"><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+				<div class="col-lg-4 text-right d-none d-lg-block">
+					<a href="club-create.html" class="boxed-btn">+ Nuevo Club</a>
+				</div>
+			</div>
+
+			<!-- Botón móvil -->
+			<div class="row mb-30 d-lg-none">
+				<div class="col-12">
+					<a href="club-create.html" class="boxed-btn btn-block text-center">+ Nuevo Club</a>
+				</div>
+			</div>
+
+			<!-- Grid de clubes -->
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="club-card">
+						<div class="club-logo">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<div class="club-body">
+							<h3 class="club-name">Club Deportivo A</h3>
+							<div class="club-info">
+								<i class="fas fa-user"></i> <strong>Entrenador:</strong> Carlos López
+							</div>
+							<div class="club-info">
+								<i class="fas fa-users"></i> <strong>Jugadores:</strong> 15
+							</div>
+							<div class="club-info">
+								<i class="fas fa-mapmarker-alt"></i> Córdoba
+							</div>
+							<div class="club-info">
+								<span class="badge badge-success">Activo</span>
+							</div>
+							<div class="club-actions">
+								<a href="club-detail.html?id=1" class="btn btn-sm btn-info" title="Ver">
+									<i class="fas fa-eye"></i> Ver
+								</a>
+								<a href="club-edit.html?id=1" class="btn btn-sm btn-warning" title="Editar">
+									<i class="fas fa-edit"></i> Editar
+								</a>
+								<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Club Deportivo A', 1)" title="Eliminar">
+									<i class="fas fa-trash"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="club-card">
+						<div class="club-logo" style="background: linear-gradient(135deg, #0066cc 0%, #0099ff 100%);">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<div class="club-body">
+							<h3 class="club-name">Club Deportivo B</h3>
+							<div class="club-info">
+								<i class="fas fa-user"></i> <strong>Entrenador:</strong> Roberto Martín
+							</div>
+							<div class="club-info">
+								<i class="fas fa-users"></i> <strong>Jugadores:</strong> 13
+							</div>
+							<div class="club-info">
+								<i class="fas fa-mapmarker-alt"></i> Punilla
+							</div>
+							<div class="club-info">
+								<span class="badge badge-success">Activo</span>
+							</div>
+							<div class="club-actions">
+								<a href="club-detail.html?id=2" class="btn btn-sm btn-info" title="Ver">
+									<i class="fas fa-eye"></i> Ver
+								</a>
+								<a href="club-edit.html?id=2" class="btn btn-sm btn-warning" title="Editar">
+									<i class="fas fa-edit"></i> Editar
+								</a>
+								<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Club Deportivo B', 2)" title="Eliminar">
+									<i class="fas fa-trash"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="club-card">
+						<div class="club-logo" style="background: linear-gradient(135deg, #00cc00 0%, #33ff33 100%);">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<div class="club-body">
+							<h3 class="club-name">Club Deportivo C</h3>
+							<div class="club-info">
+								<i class="fas fa-user"></i> <strong>Entrenador:</strong> María González
+							</div>
+							<div class="club-info">
+								<i class="fas fa-users"></i> <strong>Jugadores:</strong> 14
+							</div>
+							<div class="club-info">
+								<i class="fas fa-mapmarker-alt"></i> Cosquín
+							</div>
+							<div class="club-info">
+								<span class="badge badge-success">Activo</span>
+							</div>
+							<div class="club-actions">
+								<a href="club-detail.html?id=3" class="btn btn-sm btn-info" title="Ver">
+									<i class="fas fa-eye"></i> Ver
+								</a>
+								<a href="club-edit.html?id=3" class="btn btn-sm btn-warning" title="Editar">
+									<i class="fas fa-edit"></i> Editar
+								</a>
+								<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Club Deportivo C', 3)" title="Eliminar">
+									<i class="fas fa-trash"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="club-card">
+						<div class="club-logo" style="background: linear-gradient(135deg, #cc0000 0%, #ff3333 100%);">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<div class="club-body">
+							<h3 class="club-name">Club Deportivo D</h3>
+							<div class="club-info">
+								<i class="fas fa-user"></i> <strong>Entrenador:</strong> Juan Pérez
+							</div>
+							<div class="club-info">
+								<i class="fas fa-users"></i> <strong>Jugadores:</strong> 12
+							</div>
+							<div class="club-info">
+								<i class="fas fa-mapmarker-alt"></i> Mina Clavero
+							</div>
+							<div class="club-info">
+								<span class="badge badge-warning">Suspendido</span>
+							</div>
+							<div class="club-actions">
+								<a href="club-detail.html?id=4" class="btn btn-sm btn-info" title="Ver">
+									<i class="fas fa-eye"></i> Ver
+								</a>
+								<a href="club-edit.html?id=4" class="btn btn-sm btn-warning" title="Editar">
+									<i class="fas fa-edit"></i> Editar
+								</a>
+								<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Club Deportivo D', 4)" title="Eliminar">
+									<i class="fas fa-trash"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="club-card">
+						<div class="club-logo" style="background: linear-gradient(135deg, #9933cc 0%, #cc66ff 100%);">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<div class="club-body">
+							<h3 class="club-name">Club Deportivo E</h3>
+							<div class="club-info">
+								<i class="fas fa-user"></i> <strong>Entrenador:</strong> Ana Rodríguez
+							</div>
+							<div class="club-info">
+								<i class="fas fa-users"></i> <strong>Jugadores:</strong> 16
+							</div>
+							<div class="club-info">
+								<i class="fas fa-mapmarker-alt"></i> Jesús María
+							</div>
+							<div class="club-info">
+								<span class="badge badge-success">Activo</span>
+							</div>
+							<div class="club-actions">
+								<a href="club-detail.html?id=5" class="btn btn-sm btn-info" title="Ver">
+									<i class="fas fa-eye"></i> Ver
+								</a>
+								<a href="club-edit.html?id=5" class="btn btn-sm btn-warning" title="Editar">
+									<i class="fas fa-edit"></i> Editar
+								</a>
+								<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Club Deportivo E', 5)" title="Eliminar">
+									<i class="fas fa-trash"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-30">
+					<div class="club-card">
+						<div class="club-logo" style="background: linear-gradient(135deg, #ffcc00 0%, #ffff33 100%); color: #051922;">
+							<i class="fas fa-shield-alt"></i>
+						</div>
+						<div class="club-body">
+							<h3 class="club-name">Club Deportivo F</h3>
+							<div class="club-info">
+								<i class="fas fa-user"></i> <strong>Entrenador:</strong> Diego López
+							</div>
+							<div class="club-info">
+								<i class="fas fa-users"></i> <strong>Jugadores:</strong> 11
+							</div>
+							<div class="club-info">
+								<i class="fas fa-mapmarker-alt"></i> Villa Giardino
+							</div>
+							<div class="club-info">
+								<span class="badge badge-success">Activo</span>
+							</div>
+							<div class="club-actions">
+								<a href="club-detail.html?id=6" class="btn btn-sm btn-info" title="Ver">
+									<i class="fas fa-eye"></i> Ver
+								</a>
+								<a href="club-edit.html?id=6" class="btn btn-sm btn-warning" title="Editar">
+									<i class="fas fa-edit"></i> Editar
+								</a>
+								<button class="btn btn-sm btn-danger" onclick="confirmarEliminar('Club Deportivo F', 6)" title="Eliminar">
+									<i class="fas fa-trash"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Paginación -->
+			<div class="row mt-50">
+				<div class="col-lg-12 text-center">
+					<nav aria-label="Page navigation">
+						<ul class="pagination justify-content-center">
+							<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end clubes section -->
+
+	<!-- footer -->
+	</footer>
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item"><img src="/assets/img/company-logos/1.svg" alt=""></div>
+						<div class="single-logo-item"><img src="/assets/img/company-logos/2.svg" alt=""></div>
+						<div class="single-logo-item"><img src="/assets/img/company-logos/3.svg" alt=""></div>
+						<div class="single-logo-item"><img src="/assets/img/company-logos/4.svg" alt=""></div>
+						<div class="single-logo-item"><img src="/assets/img/company-logos/5.svg" alt=""></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-12">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">Sobre la Liga</h2>
+						<p>La <strong>Liga Recreativa de Handball Punilla</strong> promueve el desarrollo del handball en la región, fomentando la competencia, la participación y el crecimiento de clubes, jugadores y árbitros. Nuestro objetivo es fortalecer la comunidad deportiva y acompañar el crecimiento del handball local.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Contacto</h2>
+						<ul>
+							<li> <a href="mailto:handballpunilla@gmail.com">handballpunilla@gmail.com</a> </li>
+							<li> <a href="tel:+543511234567">+54 351 123-4567</a> </li>
+							<li> <a href="#">Valle de Punilla, Córdoba</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="offset-lg-3 col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Paginas</h2>
+						<ul>
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../news.html">Noticias</a></li>
+							<li><a href="../handbook.html">Handball</a></li>
+							<li><a href="../contact.html">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>© Liga Recreativa de Handball Punilla – Todos los derechos reservados.<br>Desarrollo y diseño institucional.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="https://www.facebook.com/liga.punilla" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://w.app/jm7vln" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+							<li><a href="https://www.instagram.com/ligapunillahandball/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/sticker.js"></script>
+	<script src="../assets/js/waypoints.js"></script>
+	<script src="../assets/js/form-validate.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		function confirmarEliminar(nombre, id) {
+			if (confirm('¿Estás seguro que deseas eliminar ' + nombre + '?')) {
+				console.log('Eliminar club ID: ' + id);
+				// Aquí iría la lógica de eliminación
+			}
+		}
+	</script>
+</body>
+
+</html>

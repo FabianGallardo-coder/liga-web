@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Gestión de Cuotas - Liga Handball Punilla">
+
+	<!-- title -->
+	<title>Cuotas - Liga Handball Punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+	<style>
+		.summary-cards {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 20px;
+			margin-bottom: 40px;
+		}
+
+		.summary-card {
+			background: white;
+			border-radius: 8px;
+			padding: 20px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.summary-card.pending {
+			border-left: 4px solid #dc3545;
+		}
+
+		.summary-card.paid {
+			border-left: 4px solid #28a745;
+		}
+
+		.summary-card.overdue {
+			border-left: 4px solid #ffc107;
+		}
+
+		.summary-card h4 {
+			color: #999999;
+			font-size: 13px;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+
+		.summary-card .total {
+			font-size: 28px;
+			font-weight: bold;
+			color: #051922;
+		}
+	</style>
+
+</head>
+<!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<div class="site-logo">
+							<a href="../index.html">
+								<img src="/assets/img/logo.svg" alt="">
+							</a>
+						</div>
+						<nav class="main-menu">
+							<ul>
+								<li><a href="../index.html">Inicio</a></li>
+								<li><a href="#">Handball</a>
+									<ul class="sub-menu">
+										<li><a href="../tablas.html">Tablas & fexture</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Institucional</a>
+									<ul class="sub-menu">
+										<li><a href="../about.html">Nosotros</a></li>
+										<li><a href="../404.html">404 page</a></li>
+									</ul>
+								</li>
+								<li><a href="../news.html">Noticias</a></li>
+								<li><a href="../contact.html">Contacto</a></li>
+								<li>
+									<div class="header-icons">
+										<a href="../sistema/login.html"><i class="fas fa-user"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Gestión de Cuotas</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- cuota section -->
+	<div class="cuota-section mt-150 mb-150">
+		<div class="container">
+			<!-- Resumen de Cuotas -->
+			<div class="summary-cards">
+				<div class="summary-card pending">
+					<h4>Pendiente de Pago</h4>
+					<div class="total">$4.850</div>
+					<small>6 cuotas</small>
+				</div>
+				<div class="summary-card overdue">
+					<h4>Vencidas</h4>
+					<div class="total">$1.200</div>
+					<small>2 cuotas</small>
+				</div>
+				<div class="summary-card paid">
+					<h4>Pagadas</h4>
+					<div class="total">$12.500</div>
+					<small>25 cuotas</small>
+				</div>
+			</div>
+
+			<!-- Barra de búsqueda y botón crear -->
+			<div class="row mb-50">
+				<div class="col-lg-6">
+					<div class="search-box">
+						<input type="text" class="form-control" placeholder="Buscar cuota por concepto, jugador o club...">
+						<button class="search-btn"><i class="fas fa-search"></i></button>
+					</div>
+				</div>
+				<div class="col-lg-6 text-right">
+					<a href="create.html" class="boxed-btn">+ Nueva Cuota</a>
+					<a href="payment.html" class="boxed-btn bordered-btn ml-2">Pagos</a>
+				</div>
+			</div>
+
+			<!-- Tabla de cuotas -->
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="table-responsive cuota-table-wrap">	
+						<table class="table table-hover cuota-table">
+							<thead class="table-dark">
+								<tr>
+									<th>Concepto</th>
+									<th>Entidad</th>
+									<th>Monto</th>
+									<th>Vencimiento</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>Juan García López</td>
+									<td>$500</td>
+									<td>15/03/2026</td>
+									<td><span class="badge badge-danger">Vencido</span></td>
+									<td>
+										<a href="payment.html?id=1" class="btn btn-sm btn-success" title="Marcar como pagado">
+											<i class="fas fa-check"></i> Pago
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar(1)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>Club Deportivo B</td>
+									<td>$1.200</td>
+									<td>20/03/2026</td>
+									<td><span class="badge badge-warning">Próximo Vencer</span></td>
+									<td>
+										<a href="payment.html?id=2" class="btn btn-sm btn-success" title="Marcar como pagado">
+											<i class="fas fa-check"></i> Pago
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar(2)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Inscripción Torneo</strong></td>
+									<td>Club Deportivo A</td>
+									<td>$2.500</td>
+									<td>30/03/2026</td>
+									<td><span class="badge badge-info">Pendiente</span></td>
+									<td>
+										<a href="payment.html?id=3" class="btn btn-sm btn-success" title="Marcar como pagado">
+											<i class="fas fa-check"></i> Pago
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar(3)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>María Rodríguez</td>
+									<td>$500</td>
+									<td>25/03/2026</td>
+									<td><span class="badge badge-info">Pendiente</span></td>
+									<td>
+										<a href="payment.html?id=4" class="btn btn-sm btn-success" title="Marcar como pagado">
+											<i class="fas fa-check"></i> Pago
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar(4)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Arbitraje</strong></td>
+									<td>Club Deportivo C</td>
+									<td>$850</td>
+									<td>10/02/2026</td>
+									<td><span class="badge badge-success">Pagado</span></td>
+									<td>
+										<a href="invoice.html?id=5" class="btn btn-sm btn-primary" title="Ver recibo">
+											<i class="fas fa-file-pdf"></i> Recibo
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar(5)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>Club Deportivo D</td>
+									<td>$1.000</td>
+									<td>28/02/2026</td>
+									<td><span class="badge badge-success">Pagado</span></td>
+									<td>
+										<a href="invoice.html?id=6" class="btn btn-sm btn-primary" title="Ver recibo">
+											<i class="fas fa-file-pdf"></i> Recibo
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar(6)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>Roberto Jiménez</td>
+									<td>$500</td>
+									<td>15/03/2026</td>
+									<td><span class="badge badge-danger">Vencido</span></td>
+									<td>
+										<a href="payment.html?id=7" class="btn btn-sm btn-success" title="Marcar como pagado">
+											<i class="fas fa-check"></i> Pago
+										</a>
+										<button class="btn btn-sm btn-danger" onclick="confirmarEliminar(7)" title="Eliminar">
+											<i class="fas fa-trash"></i>
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- Paginación -->
+			<div class="row mt-40">
+				<div class="col-lg-12 text-center">
+					<nav aria-label="Page navigation">
+						<ul class="pagination justify-content-center">
+							<li class="page-item"><a class="page-link" href="#">Anterior</a></li>
+							<li class="page-item active"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end cuota section -->
+
+	<!-- footer -->
+	<div class="logo-carousel-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="logo-carousel-inner">
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/1.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/2.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/3.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/4.svg" alt="">
+						</div>
+						<div class="single-logo-item">
+							<img src="/assets/img/company-logos/5.svg" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end logo carousel -->
+	<!-- footer -->
+	<div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-12">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">Sobre la Liga</h2>
+						<p>La <strong>Liga Recreativa de Handball Punilla</strong> promueve el desarrollo del handball en la región, fomentando la competencia, la participación y el crecimiento de clubes, jugadores y árbitros. Nuestro objetivo es fortalecer la comunidad deportiva y acompañar el crecimiento del handball local.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Contacto</h2>
+						<ul>
+							<li> <a href="mailto:handballpunilla@gmail.com">handballpunilla@gmail.com</a> </li>
+							<li> <a href="tel:+543511234567">+54 351 123-4567</a> </li>
+							<li> <a href="#">Valle de Punilla, Córdoba</a> </li>
+						</ul>
+					</div>
+				</div>
+				<div class="offset-lg-3 col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Paginas</h2>
+						<ul>
+							<li><a href="../index.html">Inicio</a></li>
+							<li><a href="../news.html">Noticias</a></li>
+							<li><a href="../tablas.html">Handball</a></li>
+							<li><a href="../contact.html">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end footer -->
+	
+	<!-- copyright -->
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-12">
+					<p>© Liga Recreativa de Handball Punilla – Todos los derechos reservados.<br>
+Desarrollo y diseño institucional.</p>
+				</div>
+				<div class="col-lg-6 text-right col-md-12">
+					<div class="social-icons">
+						<ul>
+							<li><a href="https://www.facebook.com/liga.punilla" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://w.app/jm7vln" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+							<li><a href="https://www.instagram.com/ligapunillahandball/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end copyright -->
+	<!-- end footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/sticker.js"></script>
+	<script src="../assets/js/waypoints.js"></script>
+	<script src="../assets/js/form-validate.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		function confirmarEliminar(id) {
+			if (confirm('¿Estás seguro que deseas eliminar esta cuota?')) {
+				console.log('Eliminar cuota ID: ' + id);
+				// Aquí iría la lógica de eliminación
+			}
+		}
+	</script>
+</body>
+
+</html>

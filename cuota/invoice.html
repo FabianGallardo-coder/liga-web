@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Recibo de Pago - Liga Handball Punilla">
+
+	<!-- title -->
+	<title>Recibo de Pago - Liga Handball Punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+	<style>
+		.invoice-wrapper {
+			background: white;
+			border: 1px solid #ddd;
+			padding: 40px;
+			border-radius: 8px;
+			margin: 0 auto;
+			max-width: 600px;
+			box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+		}
+
+		.invoice-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 3px solid #F28123;
+			padding-bottom: 20px;
+			margin-bottom: 30px;
+		}
+
+		.invoice-logo {
+			font-size: 24px;
+			font-weight: bold;
+			color: #051922;
+		}
+
+		.invoice-logo-sub {
+			font-size: 12px;
+			color: #999999;
+		}
+
+		.invoice-number {
+			text-align: right;
+		}
+
+		.invoice-number h3 {
+			margin: 0;
+			color: #F28123;
+			font-size: 18px;
+		}
+
+		.invoice-number p {
+			margin: 0;
+			color: #999999;
+			font-size: 11px;
+		}
+
+		.invoice-section {
+			margin-bottom: 25px;
+		}
+
+		.section-title {
+			font-size: 12px;
+			font-weight: bold;
+			color: #051922;
+			text-transform: uppercase;
+			border-bottom: 1px solid #f0f0f0;
+			padding-bottom: 8px;
+			margin-bottom: 12px;
+		}
+
+		.section-row {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 8px;
+			font-size: 13px;
+		}
+
+		.section-row .label {
+			color: #999999;
+		}
+
+		.section-row .value {
+			color: #051922;
+			font-weight: 500;
+		}
+
+		.invoice-table {
+			width: 100%;
+			margin-bottom: 25px;
+		}
+
+		.invoice-table th {
+			background: #f9f9f9;
+			border-bottom: 2px solid #051922;
+			padding: 12px;
+			text-align: left;
+			font-size: 11px;
+			font-weight: bold;
+			color: #051922;
+			text-transform: uppercase;
+		}
+
+		.invoice-table td {
+			border-bottom: 1px solid #f0f0f0;
+			padding: 12px;
+			font-size: 13px;
+		}
+
+		.invoice-table tr:last-child td {
+			border-bottom: none;
+		}
+
+		.total-section {
+			background: #f9f9f9;
+			padding: 20px;
+			border-radius: 4px;
+			margin-bottom: 25px;
+		}
+
+		.total-row {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 10px;
+			font-size: 13px;
+		}
+
+		.total-row.final {
+			font-size: 18px;
+			font-weight: bold;
+			color: #051922;
+			border-top: 2px solid #051922;
+			padding-top: 10px;
+		}
+
+		.invoice-footer {
+			text-align: center;
+			border-top: 1px solid #f0f0f0;
+			padding-top: 20px;
+			font-size: 11px;
+			color: #999999;
+		}
+
+		.print-button {
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.status-badge {
+			display: inline-block;
+			background: #d4edda;
+			color: #155724;
+			padding: 8px 12px;
+			border-radius: 4px;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		@media print {
+			body {
+				background: white;
+			}
+			.breadcrumb-section,
+			#navbar-container,
+			#footer-container,
+			.print-button {
+				display: none !important;
+			}
+			.invoice-wrapper {
+				box-shadow: none;
+				border: none;
+				padding: 0;
+			}
+		}
+	</style>
+
+</head>
+<!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+	<div class="top-header-area" id="sticker">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-sm-12 text-center">
+					<div class="main-menu-wrap">
+						<div class="site-logo">
+							<a href="../index.html">
+								<img src="/assets/img/logo.svg" alt="">
+							</a>
+						</div>
+						<nav class="main-menu">
+							<ul>
+								<li><a href="../index.html">Inicio</a></li>
+								<li><a href="#">Handball</a>
+									<ul class="sub-menu">
+										<li><a href="../tablas.html">Tablas & fexture</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Institucional</a>
+									<ul class="sub-menu">
+										<li><a href="../about.html">Nosotros</a></li>
+										<li><a href="../404.html">404 page</a></li>
+									</ul>
+								</li>
+								<li><a href="../news.html">Noticias</a></li>
+								<li><a href="../contact.html">Contacto</a></li>
+								<li>
+									<div class="header-icons">
+										<a href="../sistema/login.html"><i class="fas fa-user"></i></a>
+									</div>
+								</li>
+							</ul>
+						</nav>
+						<div class="mobile-menu"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Recibo de Pago</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- invoice section -->
+	<div class="checkout-section mt-150 mb-150">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2">
+					<!-- Invoice Wrapper -->
+					<div class="invoice-wrapper" id="invoice">
+						<!-- Header -->
+						<div class="invoice-header">
+							<div>
+								<div class="invoice-logo">
+									<i class="fas fa-basketball"></i> Liga Handball
+								</div>
+								<div class="invoice-logo-sub">Handball Punilla</div>
+							</div>
+							<div class="invoice-number">
+								<h3>RECIBO #2026-001</h3>
+								<p>10 de Febrero de 2026</p>
+							</div>
+						</div>
+
+						<!-- Datos de Facturación -->
+						<div class="invoice-section">
+							<div class="section-title">Datos de Facturación</div>
+							<div class="section-row">
+								<span class="label">Entidad:</span>
+								<span class="value">Club Deportivo C</span>
+							</div>
+							<div class="section-row">
+								<span class="label">Responsable:</span>
+								<span class="value">Director Técnico</span>
+							</div>
+							<div class="section-row">
+								<span class="label">Email:</span>
+								<span class="value">info@clubc.com</span>
+							</div>
+							<div class="section-row">
+								<span class="label">Teléfono:</span>
+								<span class="value">+54 3876 123456</span>
+							</div>
+						</div>
+
+						<!-- Detalles de la Cuota -->
+						<div class="invoice-section">
+							<div class="section-title">Detalles de la Cuota</div>
+							<table class="invoice-table">
+								<thead>
+									<tr>
+										<th>Descripción</th>
+										<th style="text-align: right;">Cantidad</th>
+										<th style="text-align: right;">Precio Unit.</th>
+										<th style="text-align: right;">Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Cuota Mensual - Febrero 2026</td>
+										<td style="text-align: right;">1</td>
+										<td style="text-align: right;">$850</td>
+										<td style="text-align: right;">$850</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- Resumen Total -->
+						<div class="total-section">
+							<div class="total-row">
+								<span>Subtotal:</span>
+								<span>$850</span>
+							</div>
+							<div class="total-row">
+								<span>Descuentos:</span>
+								<span>$0</span>
+							</div>
+							<div class="total-row">
+								<span>Impuestos:</span>
+								<span>$0</span>
+							</div>
+							<div class="total-row final">
+								<span>Total a Pagar:</span>
+								<span>$850</span>
+							</div>
+						</div>
+
+						<!-- Información de Pago -->
+						<div class="invoice-section">
+							<div class="section-title">Información de Pago</div>
+							<div class="section-row">
+								<span class="label">Método de Pago:</span>
+								<span class="value">Transferencia Bancaria</span>
+							</div>
+							<div class="section-row">
+								<span class="label">Número de Transacción:</span>
+								<span class="value">TRX-2026-001234</span>
+							</div>
+							<div class="section-row">
+								<span class="label">Fecha de Pago:</span>
+								<span class="value">10 de Febrero de 2026</span>
+							</div>
+							<div class="section-row">
+								<span class="label">Estado:</span>
+								<span class="value"><span class="status-badge">Pagado</span></span>
+							</div>
+						</div>
+
+						<!-- Nota y Footer -->
+						<div class="invoice-section">
+							<div class="section-title">Notas</div>
+							<p style="font-size: 12px; color: #666; margin: 0;">
+								Este recibo confirma la recepción del pago indicado. Conservar para sus registros. En caso de consultas, contactarse con la oficina de administración.
+							</p>
+						</div>
+
+						<div class="invoice-footer">
+							<p>Gracias por tu contribución a Liga Handball Punilla</p>
+							<p>oficina@ligahandballpunilla.com | +54 3876 000000</p>
+						</div>
+					</div>
+
+					<!-- Botones de Acción -->
+					<div class="print-button">
+						<button class="boxed-btn" onclick="window.print()">
+							<i class="fas fa-print"></i> Imprimir Recibo
+						</button>
+						<a href="index.html" class="boxed-btn bordered-btn ml-3">
+							<i class="fas fa-arrow-left"></i> Volver
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end invoice section -->
+
+	<!-- footer -->
+	<footer id="footer-container"></footer>
+	<!-- end footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/sticker.js"></script>
+	<script src="../assets/js/waypoints.js"></script>
+	<script src="../assets/js/form-validate.js"></script>
+	<script src="../assets/js/main.js"></script>
+</body>
+
+</html>

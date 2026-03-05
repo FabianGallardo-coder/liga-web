@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Incio de head // cortar para reutilizar -->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Gestión de Pagos - Liga Handball Punilla">
+
+	<!-- title -->
+	<title>Gestión de Pagos - Liga Handball Punilla</title>
+
+	<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../assets/img/logo.ico">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="../assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="../assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+	<style>
+		.payment-dashboard {
+			margin-bottom: 40px;
+		}
+
+		.status-label {
+			display: inline-block;
+			padding: 8px 12px;
+			border-radius: 4px;
+			font-size: 12px;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+
+		.status-pagado {
+			background: #d4edda;
+			color: #155724;
+		}
+
+		.status-pendiente {
+			background: #fff3cd;
+			color: #856404;
+		}
+
+		.status-vencido {
+			background: #f8d7da;
+			color: #721c24;
+		}
+
+		.payment-history-table {
+			background: white;
+		}
+
+		.payment-icons {
+			display: flex;
+			gap: 8px;
+			align-items: center;
+		}
+
+		.payment-method-badge {
+			display: inline-block;
+			padding: 6px 10px;
+			background: #f5f5f5;
+			border-radius: 4px;
+			font-size: 12px;
+			margin-right: 10px;
+		}
+
+		.amount-box {
+			background: #f9f9f9;
+			padding: 15px;
+			border-left: 4px solid #F28123;
+			border-radius: 4px;
+			margin-bottom: 20px;
+		}
+
+		.amount-label {
+			color: #999999;
+			font-size: 13px;
+			margin-bottom: 5px;
+		}
+
+		.amount-total {
+			font-size: 28px;
+			font-weight: bold;
+			color: #051922;
+		}
+
+		.form-section-payment {
+			background: white;
+			padding: 30px;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		}
+	</style>
+
+</head>
+<!--Fin de head // cortar para reutilizar -->
+<body>
+    	
+	<!--PreLoader-->
+    <div class="loader">
+        <div class="loader-inner">
+            <div class="circle"></div>
+        </div>
+    </div>
+    <!--PreLoader Ends-->
+	
+	<!-- header -->
+    <header id="navbar-container"></header>
+	<!-- end header -->
+
+	<!-- breadcrumb-section -->
+	<div class="breadcrumb-section breadcrumb-bg" style="background-image: url('../assets/img/breadcrumb-bg.jpg');">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<p>Deporte · Comunidad · Pasión</p>
+						<h1>Gestión de Pagos</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+
+	<!-- payment section -->
+	<div class="checkout-section mt-150 mb-150">
+		<div class="container">
+			<!-- Resumen Pendiente -->
+			<div class="row mb-40">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="amount-box">
+						<div class="amount-label">Cuotas Pendientes de Pago</div>
+						<div class="amount-total">$6.050</div>
+						<small>8 cuotas sin pagar</small>
+					</div>
+				</div>
+			</div>
+
+			<!-- Formulario de Pago -->
+			<div class="row mb-50">
+				<div class="col-lg-8 offset-lg-2">
+					<div class="form-section-payment">
+						<h3 class="checkout-title mb-30">
+							<span>Registrar Pago</span>
+						</h3>
+
+						<form id="paymentForm">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="cuota_pagar">Cuota a Pagar <span style="color: #F28123;">*</span></label>
+									<select id="cuota_pagar" name="cuota_pagar" class="form-control" required>
+										<option value="">Selecciona una cuota pendiente</option>
+										<option value="1">Cuota Mensual - Juan García López - $500 (Vencida: 15/03)</option>
+										<option value="2">Cuota Mensual - Club Deportivo B - $1.200 (próximo: 20/03)</option>
+										<option value="3">Inscripción Torneo - Club Deportivo A - $2.500 (30/03)</option>
+										<option value="4">Cuota Mensual - María Rodríguez - $500 (25/03)</option>
+										<option value="7">Cuota Mensual - Roberto Jiménez - $500 (Vencida: 15/03)</option>
+									</select>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="monto_pago">Monto a Pagar ($) <span style="color: #F28123;">*</span></label>
+									<input type="number" id="monto_pago" name="monto_pago" class="form-control" placeholder="Ej: 500" step="0.01" required>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label for="fecha_pago">Fecha de Pago <span style="color: #F28123;">*</span></label>
+									<input type="date" id="fecha_pago" name="fecha_pago" class="form-control" required>
+								</div>
+								<div class="form-group col-md-6">
+									<label for="metodo_pago_nuevo">Método de Pago <span style="color: #F28123;">*</span></label>
+									<select id="metodo_pago_nuevo" name="metodo_pago_nuevo" class="form-control" required>
+										<option value="">Selecciona un método</option>
+										<option value="efectivo">Efectivo</option>
+										<option value="transferencia">Transferencia Bancaria</option>
+										<option value="tarjeta">Tarjeta Crédito/Débito</option>
+										<option value="cheque">Cheque</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="form-row">
+								<div class="form-group col-md-12">
+									<label for="numero_transaccion">Número de Transacción/Referencia</label>
+									<input type="text" id="numero_transaccion" name="numero_transaccion" class="form-control" placeholder="Ej: TRX-2026-001234">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="observaciones_pago">Observaciones</label>
+								<textarea id="observaciones_pago" name="observaciones_pago" class="form-control" rows="3" placeholder="Agregar cualquier nota sobre el pago..."></textarea>
+							</div>
+
+							<div class="checkout-btn-box mt-40 mb-30 text-center">
+								<button type="submit" class="boxed-btn">Registrar Pago</button>
+								<a href="index.html" class="boxed-btn bordered-btn ml-3">Volver al Listado</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- Historial de Pagos -->
+			<div class="row">
+				<div class="col-lg-12">
+					<h3 class="checkout-title mt-50 mb-30">Historial de Pagos Recientes</h3>
+					<div class="table-responsive cuota-table-wrap">	
+						<table class="table table-hover payment-history-table">
+							<thead class="table-dark">
+								<tr>
+									<th>Cuota</th>
+									<th>Entidad</th>
+									<th>Monto</th>
+									<th>Fecha Pago</th>
+									<th>Método</th>
+									<th>Estado</th>
+									<th>Acciones</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>Club Deportivo C</td>
+									<td>$850</td>
+									<td>10/02/2026</td>
+									<td><span class="payment-method-badge">Transferencia</span></td>
+									<td><span class="status-label status-pagado">Pagado</span></td>
+									<td>
+										<a href="invoice.html?id=5" class="btn btn-sm btn-primary" title="Ver comprobante">
+											<i class="fas fa-receipt"></i> Comprobante
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Inscripción</strong></td>
+									<td>Club Deportivo A</td>
+									<td>$2.500</td>
+									<td>05/02/2026</td>
+									<td><span class="payment-method-badge">Efectivo</span></td>
+									<td><span class="status-label status-pagado">Pagado</span></td>
+									<td>
+										<a href="invoice.html?id=4" class="btn btn-sm btn-primary" title="Ver comprobante">
+											<i class="fas fa-receipt"></i> Comprobante
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>Club Deportivo D</td>
+									<td>$1.000</td>
+									<td>28/02/2026</td>
+									<td><span class="payment-method-badge">Tarjeta</span></td>
+									<td><span class="status-label status-pagado">Pagado</span></td>
+									<td>
+										<a href="invoice.html?id=6" class="btn btn-sm btn-primary" title="Ver comprobante">
+											<i class="fas fa-receipt"></i> Comprobante
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Cuota Mensual</strong></td>
+									<td>Club Deportivo E</td>
+									<td>$950</td>
+									<td>15/02/2026</td>
+									<td><span class="payment-method-badge">Cheque</span></td>
+									<td><span class="status-label status-pagado">Pagado</span></td>
+									<td>
+										<a href="invoice.html?id=3" class="btn btn-sm btn-primary" title="Ver comprobante">
+											<i class="fas fa-receipt"></i> Comprobante
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td><strong>Arbitraje</strong></td>
+									<td>Juan García López</td>
+									<td>$300</td>
+									<td>20/02/2026</td>
+									<td><span class="payment-method-badge">Transferencia</span></td>
+									<td><span class="status-label status-pagado">Pagado</span></td>
+									<td>
+										<a href="invoice.html?id=2" class="btn btn-sm btn-primary" title="Ver comprobante">
+											<i class="fas fa-receipt"></i> Comprobante
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end payment section -->
+
+	<!-- footer -->
+	<footer id="footer-container"></footer>
+	<!-- end footer -->
+
+	<!-- script -->
+	<script src="../assets/js/jquery-1.11.3.min.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/owl.carousel.min.js"></script>
+	<script src="../assets/js/jquery.countdown.js"></script>
+	<script src="../assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/sticker.js"></script>
+	<script src="../assets/js/waypoints.js"></script>
+	<script src="../assets/js/form-validate.js"></script>
+	<script src="../assets/js/main.js"></script>
+	<script>
+		// Establecer fecha de pago como hoy
+		document.getElementById('fecha_pago').valueAsDate = new Date();
+
+		document.getElementById('paymentForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const cuota = document.getElementById('cuota_pagar').value;
+			const monto = document.getElementById('monto_pago').value;
+			const fechaPago = document.getElementById('fecha_pago').value;
+			const metodo = document.getElementById('metodo_pago_nuevo').value;
+
+			if (!cuota || !monto || !fechaPago || !metodo) {
+				alert('Por favor completa todos los campos requeridos.');
+				return;
+			}
+
+			if (monto <= 0) {
+				alert('El monto debe ser mayor a 0.');
+				return;
+			}
+
+			console.log('Registrando pago:', {
+				cuota: cuota,
+				monto: monto,
+				fechaPago: fechaPago,
+				metodo: metodo
+			});
+
+			alert('Pago registrado exitosamente. Se generará el comprobante automáticamente.');
+			// Aquí iría la lógica para guardar en bd y generar comprobante
+			document.getElementById('paymentForm').reset();
+		});
+	</script>
+</body>
+
+</html>
